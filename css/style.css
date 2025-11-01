@@ -1,0 +1,416 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+--verde-escuro: hsl(231, 33%, 36%);
+
+}
+.background-verde{
+    background: var(--verde-escuro);
+}
+/* classes reutilizaveis */
+.container{
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section,
+footer{
+    padding: 2.7rem 0;
+}
+.btn-gradient{
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+/* Classe do site */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+.logo a{
+    font-size: 35px;
+    font-weight: bold;
+    color: white
+}
+.ul{
+    display: flex;
+    align-items: center;
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 20px;
+}
+.ul li a{
+    color: white;
+}
+/* main */
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.main-text{
+    width: 50%;
+    color: white;
+}
+.main-text h1{
+    font-size: 2rem;
+}
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.main-img {
+    width: 50%;
+}
+.main-img img{
+    width: 100%;
+}
+/* menu icon */
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+ /* resultados */
+.resultados{
+    background: #fa8607;
+    }
+.resultados .container{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.resultados .resultados-text{
+    color:white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    width: 50%;
+}
+.resultados .resultados-numeros{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: white;
+}
+.resultados .resultados-numeros p{
+    text-align: center;
+    margin: 0 30px;
+    font-size: 20px;
+}
+.resultados .resultados-numeros p span{
+    font-size: 30px;
+    font-weight: 600;
+}
+/* sessão diferencias */
+.diferencias .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.diferencias .card{
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    transition: 0.3s;
+}
+.diferencias .card:hover{
+    background-color: rgb(202, 228, 252);
+    box-shadow: 0px 10px 67px 8px #2c4764;
+}
+.diferencias .card .titulo{
+    margin: 13px 0;
+    font-weight: 600;
+
+}
+/* sessao Áreas de Atuação */
+.areas .container{
+    display: flex ;
+    align-items: center;
+}
+.areas .areas-img{
+    width: 50%;
+}
+.areas .areas-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.areas .areas-text{
+    width: 50%;
+    padding-left: 90px;
+}
+.areas .areas-text h2{
+    font-size: 2.5em;
+}
+.areas .areas-text p{
+    margin: 20px 0;
+    color: (--color-p--);
+}
+/* Sessao Newsletter */
+.newsletter{
+    margin-top: 50px;
+    background-color: #fa8607;
+    
+}
+.newsletter .box-newsletter{
+    text-align: center;
+    padding: 100px;
+    background-image: url('../img/imagem\ de\ fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+.newsletter .box-newsletter h2{
+    font-size: 2.5rem;
+}
+.newsletter .box-newsletter p{
+    margin: 13px 0px ;
+}
+.newsletter .box-newsletter input{
+    width: 35%;
+    padding:  15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: #000000;
+}
+.newsletter .box-newsletter button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 12px;
+    color: #ffffff;
+    background-color: #fa8607;
+    cursor: pointer;
+}
+/* End Newsletter */
+/* Footer */
+footer{
+    background-color:var(--verde-escuro);
+}
+footer .container{
+    display: flex;
+    color: #ffffff;
+}
+footer .container ul{
+    width: 25%;
+}
+footer .container h3{
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+footer .container .rede-sociais img{
+    margin-right: 15px;
+}
+footer .container ul > p{
+    margin-bottom: 40px;
+}
+footer .container li{
+    margin: 10px 0;
+}
+footer .container a{
+    color: white;
+}
+/* end footer */
+
+/* responsivo */
+@media (max-width: 960px ) {
+    .menu-icon{
+        display: block;
+    }
+    .ul{
+    position: fixed;
+    background: hsl(231, 33%, 36%);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    transition: 0.3s;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .ul li{
+        font-size: 20px;
+        margin: 20px 0px;
+    }
+    .ul.ativo{
+        left: 0;
+    }
+    main.container{
+        flex-direction: column;
+    }
+    main.container.main-img{
+        width: 100%;
+    }
+    main.container.main-text{
+        width: 100%;
+        text-align: center;
+    }
+     main.container .main-text h1{
+           font-size: 4rem;    
+    }
+    main.container .main-text div{
+        justify-content: center;
+    }
+   .resultados .container{
+    flex-direction: column;
+   }
+   .resultados .resultados-text,
+   .resultados .resultados-numeros{
+    width: 100%;
+    text-align: center;
+   }
+   .resultados-numeros{
+    margin-top: 30px;
+   }
+   .diferencias .container {
+    flex-direction: column;
+   }
+   .diferencias .card{
+    width: 100%;
+   }
+   .areas .container,
+   .areas .areas-img{
+    flex-direction:  column-reverse;
+   }
+   .areas .areas-text{
+    width: 100%;
+    text-align: center;
+   }
+   .newsletter .box-newsletter h2{
+    font-size: 2rem;
+   }
+   .newsletter .box-newsletter input{
+    width: 90%;
+   }
+   .newsletter .box-newsletter{
+    padding: 50px;
+   }
+   .newsletter.box-newsletter button{
+    width: 50%;
+    margin-top: 20px;
+   }
+   footer .container{
+    flex-direction:column;
+   }
+   footer .container ul{
+    width: 100%;
+    margin-bottom: 30px;
+   }
+}
+@media (max-width: 440px){
+    .resultados .resultados-numeros{
+        flex-direction: column;
+    }
+main .container .main-text h1{
+    font-size: 3rem;
+}
+
+}
+/* ESTILOS PARA PÁGINAS PLACEHOLDER (PROJETOS, SOBRE, CADASTRO) */
+
+main {
+    padding: 80px 0; /* Adiciona espaço vertical */
+}
+
+/* O ESTILO DE .page-placeholder: */
+.page-placeholder {
+    /* Define a largura máxima do bloco para que não fique muito largo */
+    max-width: 800px; 
+    /* Centraliza o bloco na tela */
+    margin: 0 auto; 
+    /* Centraliza o texto dentro do bloco */
+    text-align: center;
+}
+
+.page-placeholder h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+}
+
+.page-placeholder p {
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    margin-bottom: 15px;
+}
+/* GERAL */
+body {
+    font-family: Arial, sans-serif; /* Mantenha uma fonte legível */
+    color: #333; /* Cor padrão para textos do corpo */
+    line-height: 1.6;
+}
+
+/* LINKS PADRÃO (dentro do texto) */
+a {
+    color: #3f6eb7; /* Um tom de azul legível, por exemplo */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f7931e; /* Usa a cor de destaque (Laranja) no hover */
+    text-decoration: underline;
+}
+
+/* COR DOS TÍTULOS */
+.page-placeholder h1, .page-placeholder h2 {
+    color: #1a237e; /* Usa uma cor escura forte, ligada ao azul marinho */
+}
+/* ESTILOS PARA OS BOTÕES (CTA) DAS PÁGINAS PLACEHOLDER */
+
+/* Container para os botões (centraliza e dá espaço) */
+.cta-placeholder {
+    margin-top: 40px; /* Espaço acima dos botões */
+    text-align: center;
+}
+
+/* ESTILO PARA GARANTIR QUE a.btn-gradient FIQUE IDÊNTICO 
+  AO button.btn-gradient  */
+a.btn-gradient {
+    background: linear-gradient(to right, #FFA500, #FFD700); /* Seu gradiente laranja/amarelo */
+    color: white; /* Cor do texto */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px; /* Arredondamento das bordas */
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block; /* Permite padding e alinhamento */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Efeito hover para o botão principal */
+a.btn-gradient:hover {
+    transform: scale(1.05); /* Efeito de zoom leve */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Estilo para o link secundário (Voltar para Home) */
+.link-secundario {
+    display: block;  /* Faz ele pular para a linha de baixo */
+    margin-top: 20px; /* Espaço entre os dois botões */
+    font-size: 0.9em;
+    color: #444; /* Cor de texto mais sutil */
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.link-secundario:hover {
+    color: #000; /* Escurece no hover */
+}
